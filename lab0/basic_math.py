@@ -65,9 +65,9 @@ def skew(x):
     """
     m3, t = 0, 0
     for i in x:
-        m3 += (i - sum(x) / len(x))  3
-        t += (i - sum(x) / len(x))  2
-    A3 = (m3/len(x)) / ((t / len(x))  (3 / 2))
+        m3 += (i - sum(x) / len(x))**3
+        t += (i - sum(x) / len(x))**2
+    A3 = (m3/len(x)) / ((t / len(x))**(3 / 2))
     return round(A3, 2)
     pass
 
@@ -79,8 +79,8 @@ def kurtosis(x):
     """
     m4, t = 0, 0
     for i in x:
-        m4 += (i - sum(x) / len(x))  4
-        t += (i - sum(x) / len(x))  2
+        m4 += (i - sum(x) / len(x)) ** 4
+        t += (i - sum(x) / len(x))**2
     e4 = (m4/len(x)) / ((t / len(x)) ** 2) - 3
     return round(e4, 2)
     pass
